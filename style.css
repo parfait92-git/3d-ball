@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.canvas-gradian {
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) calc(100% - 100px), rgba(0,0,0,0));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) calc(100% - 100px), rgba(0,0,0,0));
+}
+
+.banierre
+{
+  background-image: url("./banniere/banniere.jpg");
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) calc(100% - 120px), rgba(0,0,0,0));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) calc(100% - 120px), rgba(0,0,0,0));
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.welcome
+{
+  position: fixed;
+  z-index: 2;
+  color: #ff0000;
+  font-size: 5.5rem;
+  right: 25%;
+  bottom: 40%;
+  transform: translate(-25%, -40%);
+}
+
+.details {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.ball-text {
+  position: fixed;
+  z-index: 2;
+  color: #ff4400;
+  font-size: 5rem;
+  right: 20%;
+  bottom: 40%;
+  transform: translate(-20%, -40%);
+}
+
+@media screen and (max-width: 1024px) {
+  .ball-text {
+    font-size: 2rem;
+    right: 50%;
+    bottom: 25%;
+    transform: translate(50%, 50%);
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
